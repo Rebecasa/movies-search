@@ -1,4 +1,4 @@
-# react-boilerplate
+# react-movies-search-project
 
 Simple react starter with the following config:
 
@@ -8,6 +8,8 @@ Simple react starter with the following config:
 - Bootstrap (css only, loaded from a cdn in `index.html`)
 - work with `.js` or `.jsx` files
 - main `application.scss` stylesheet is imported in `index.js` as a module to enjoy hot reloading
+
+- after forking and cloning - yarn install
 
 ## Scripts
 
