@@ -5,7 +5,9 @@ class Movie extends Component {
     const src = `https://image.tmdb.org/t/p/w1280/${this.props.movie.poster_path}`;
     return (
       <li className="card-container">
-        <img src={src} className="image" alt="movie" />
+        <div className="card-image">
+          <img src={src} className="image" alt="movie" />
+        </div>
         <div className="card-info">
           <h2 className="title">{this.props.movie.title}</h2>
           <p className="description">{this.props.movie.overview}</p>

@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  fas,
+  faSearch,
+  faBars,
+  faSlidersH
+} from '@fortawesome/free-solid-svg-icons';
+
 import MovieList from './movie-list';
 import UserMenu from './user-menu';
 import SearchBar from './search-bar';
 import SearchMenu from './search-menu';
 
+library.add(fas, faSearch, faBars, faSlidersH);
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +32,7 @@ class App extends Component {
       }
 
       search = (query) => {
-        const src = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${query}&primary_release_year=${this.state.date}`;
+        const src ="src"
         console.log(query);
 
         fetch(src)
@@ -35,27 +46,33 @@ class App extends Component {
       handleClickUser() {
         this.setState({ hideUserMenu: !this.state.hideUserMenu });
       }
+
       handleClickSearch() {
         this.setState({ hideSearchMenu: !this.state.hideSearchMenu });
       }
 
       render() {
-        const icon = "icon";
-        const icon2 = "icon";
-
         return (
           <div>
             <div className="main-container">
               <div className="mobile-user-menu">
-                <button className="mobile-user-button" onClick={this.handleClickUser.bind(this)} > Discover</button>
+                <button className="mobile-user-button" onClick={this.handleClickUser.bind(this)} >
+                  <FontAwesomeIcon icon="bars" />
+                </button>
                 <h1 className="discover">Discover</h1>
               </div>
-              <div hidden={this.state.hideUserMenu}>
-                <UserMenu />
+              <div className="user-menu-m" hidden={this.state.hideUserMenu}>
+                <UserMenu
+                  search="search"
+                  classSearch="white-search"
+                />
               </div>
 
               <div className="web-user-menu">
-                <UserMenu />
+                <UserMenu
+                  search="search"
+                  classSearch="white-search"
+                />
               </div>
 
               <div className="mobile-search-query">
@@ -63,9 +80,11 @@ class App extends Component {
                   search={this.search}
                   className="search-bar"
                   placeholder="Search for movies"
-                  icon={icon}
+                  icon="search"
                 />
-                <button className="mobile-search-menu"onClick={this.handleClickSearch.bind(this)}> icon</button>
+                <button className="mobile-search-menu"onClick={this.handleClickSearch.bind(this)}>
+                  <FontAwesomeIcon icon="bars" />
+                </button>
               </div>
               <div className="search-mobile"hidden={this.state.hideSearchMenu}>
                 <SearchMenu />
@@ -81,13 +100,13 @@ class App extends Component {
                       search={this.search}
                       className="search-bar"
                       placeholder="Search for movies"
-                      icon={icon}
+                      icon="search"
                     />
                     <SearchBar
                       search={this.searchDate}
                       className="search-bar"
                       placeholder="Year of release"
-                      icon={icon2}
+                      icon="search"
                     />
                   </div>
 

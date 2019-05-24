@@ -1,20 +1,24 @@
 .card-container {
   display: flex;
-  height: 173px;
-  width: 420px;
-  margin-top: 30px;
+  margin: 16px;
   background-color: $white;
-  height: 209px;
-  width: 683px;
-
+  min-height: 210px;
+  min-width: 228px;
 }
 
 .card-info {
   margin-left: 10px;
+  padding: 16px 16px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+
 }
 
 .image {
-  height: 191px;
+  height: 211px;
 }
 
 .title {
