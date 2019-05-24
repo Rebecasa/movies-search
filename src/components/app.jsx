@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import SearchBar from './search-bar';
+import MovieList from './movie-list';
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+         movies: [],
+       };
   }
     search = (query) => {
       console.log(query);
@@ -17,7 +21,7 @@ class App extends Component {
               </div>
               <div className="search-movie-container">
                 <div className="container-movies">
-                  <p>MovieList</p>
+                  <MovieList movies={this.state.movies} />
                 </div>
                 <div className="search-container">
                   <div className="search-query">
