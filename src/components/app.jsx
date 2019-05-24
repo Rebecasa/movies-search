@@ -32,7 +32,7 @@ class App extends Component {
       }
 
       search = (query) => {
-        const src ="src"
+        const src ="src";
         console.log(query);
 
         fetch(src)
