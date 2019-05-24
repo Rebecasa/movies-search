@@ -1,0 +1,49 @@
+
+.mobile-user-menu {
+  display: none;
+}
+.mobile-search-query {
+  display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .main-container {
+    display: block;
+  }
+  .web-user-menu{
+   display: none;
+  }
+  .web-search-menu {
+    display: none;
+  }
+  .search-movie-container {
+    display: block;
+  }
+  .search {
+    background-color: $gray;
+  }
+  .search-box {
+    background-color: $gray;
+    width: 440px;
+    text-align: center;
+  }
+  .search-query {
+    display: none;
+  }
+  .mobile-user-menu {
+    display: flex;
+  }
+  .mobile-search-query {
+    display: flex;
+    margin: 26px 191px;
+    .mobile-search-menu {
+      margin: 20px;
+    }
+  }
+  .discover {
+    color: $blue;
+    margin-left: 20px;
+  }
+
+}

@@ -1,0 +1,41 @@
+
+.web-user-menu {
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  height: 100 vh;
+  width: 200px;
+}
+.yellow {
+  &:hover {
+    background-color: $yellow;
+  }
+}
+
+.select {
+  display: flex;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.saved {
+  text-align: left;
+  width: 140px;
+  border-bottom: 1px dotted;
+}
+
+.watched {
+  text-align: left;
+  width: 140px;
+  border-bottom: 1px dotted;
+}
+
+.user-menu-text {
+  width: 146px;
+  padding-left: 43px;
+
+  h3{
+    margin-bottom: 40px;
+  }
+}

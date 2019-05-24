@@ -1,5 +1,9 @@
 @import 'global';
 @import 'movie-card';
+@import 'movie-list';
+@import 'search';
+@import 'user-menu';
+@import '_mobile';
 
 body {
   font-family: Helvetica;
@@ -10,4 +14,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
